@@ -19,6 +19,7 @@
 		A4D1552C2464486A002234BA /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D1552B2464486A002234BA /* Layer.swift */; };
 		A4D1552E24655AC6002234BA /* ButtonAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D1552D24655AC6002234BA /* ButtonAnimationViewController.swift */; };
 		A4D1553124655CC6002234BA /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D1553024655CC6002234BA /* UIButtonExtension.swift */; };
+		A4D1553324656F20002234BA /* ChainTextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D1553224656F1F002234BA /* ChainTextAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A4D1552B2464486A002234BA /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		A4D1552D24655AC6002234BA /* ButtonAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimationViewController.swift; sourceTree = "<group>"; };
 		A4D1553024655CC6002234BA /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		A4D1553224656F1F002234BA /* ChainTextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTextAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				A4D1552D24655AC6002234BA /* ButtonAnimationViewController.swift */,
 				A4AE40AB24603F9F00677DD0 /* ViewController.swift */,
 				A4D155272463FC74002234BA /* CircleViewController.swift */,
+				A4D1553224656F1F002234BA /* ChainTextAnimation.swift */,
 				A4D1552B2464486A002234BA /* Layer.swift */,
 				A4AE40BB2460416200677DD0 /* SecondViewController.swift */,
 				A4D1552F24655CA8002234BA /* Extensions */,
@@ -167,6 +170,7 @@
 				A4AE40BC2460416200677DD0 /* SecondViewController.swift in Sources */,
 				A4D1552E24655AC6002234BA /* ButtonAnimationViewController.swift in Sources */,
 				A4AE40AC24603F9F00677DD0 /* ViewController.swift in Sources */,
+				A4D1553324656F20002234BA /* ChainTextAnimation.swift in Sources */,
 				A4D155282463FC74002234BA /* CircleViewController.swift in Sources */,
 				A4D1552C2464486A002234BA /* Layer.swift in Sources */,
 				A4D1553124655CC6002234BA /* UIButtonExtension.swift in Sources */,

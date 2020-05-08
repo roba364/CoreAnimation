@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MBj-6D-IJK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mSx-7Q-5WI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,6 +7,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Chain Text Animation-->
+        <scene sceneID="aWv-Xa-f8b">
+            <objects>
+                <viewController id="mSx-7Q-5WI" customClass="ChainTextAnimation" customModule="CoreAnimationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QsW-Kw-6YT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31q-vT-07M">
+                                <rect key="frame" x="191" y="716" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="MBj-6D-IJK" kind="presentation" identifier="toNextVC" modalPresentationStyle="fullScreen" id="lsn-Za-nUm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destiny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E66-ja-HiQ">
+                                <rect key="frame" x="15" y="428" width="384" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeL-0l-h70">
+                                <rect key="frame" x="15" y="428" width="384" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFd-aJ-OFx">
+                                <rect key="frame" x="15" y="428" width="384" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="0.52873501712328763" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E66-ja-HiQ" firstAttribute="centerX" secondItem="QsW-Kw-6YT" secondAttribute="centerX" id="7GS-Ha-IWQ"/>
+                            <constraint firstItem="E66-ja-HiQ" firstAttribute="centerY" secondItem="QsW-Kw-6YT" secondAttribute="centerY" id="BmK-9P-irq"/>
+                            <constraint firstItem="QpI-2y-FpI" firstAttribute="trailing" secondItem="SeL-0l-h70" secondAttribute="trailing" constant="15" id="DqY-QN-2Bo"/>
+                            <constraint firstItem="SeL-0l-h70" firstAttribute="centerX" secondItem="QsW-Kw-6YT" secondAttribute="centerX" id="LFu-Z8-SbA"/>
+                            <constraint firstItem="QpI-2y-FpI" firstAttribute="trailing" secondItem="AFd-aJ-OFx" secondAttribute="trailing" constant="15" id="QXn-kF-whf"/>
+                            <constraint firstItem="AFd-aJ-OFx" firstAttribute="leading" secondItem="QpI-2y-FpI" secondAttribute="leading" constant="15" id="RmC-ge-CIq"/>
+                            <constraint firstItem="E66-ja-HiQ" firstAttribute="leading" secondItem="QpI-2y-FpI" secondAttribute="leading" constant="15" id="XGH-nS-UuK"/>
+                            <constraint firstItem="AFd-aJ-OFx" firstAttribute="centerY" secondItem="QsW-Kw-6YT" secondAttribute="centerY" id="bn0-i7-90Q"/>
+                            <constraint firstItem="AFd-aJ-OFx" firstAttribute="centerX" secondItem="QsW-Kw-6YT" secondAttribute="centerX" id="jSx-oZ-5Df"/>
+                            <constraint firstItem="SeL-0l-h70" firstAttribute="leading" secondItem="QpI-2y-FpI" secondAttribute="leading" constant="15" id="usd-xB-7Ha"/>
+                            <constraint firstItem="QpI-2y-FpI" firstAttribute="trailing" secondItem="E66-ja-HiQ" secondAttribute="trailing" constant="15" id="xIf-31-sn9"/>
+                            <constraint firstItem="SeL-0l-h70" firstAttribute="centerY" secondItem="QsW-Kw-6YT" secondAttribute="centerY" id="xrt-h9-ZRd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QpI-2y-FpI"/>
+                    </view>
+                    <connections>
+                        <outlet property="allLabel" destination="AFd-aJ-OFx" id="eVm-IE-r6c"/>
+                        <outlet property="destinyLabel" destination="E66-ja-HiQ" id="rCb-Tj-rzc"/>
+                        <outlet property="isLabel" destination="SeL-0l-h70" id="kiT-ze-NRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9J-69-4L3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2272" y="106"/>
+        </scene>
         <!--Button Animation View Controller-->
         <scene sceneID="G1V-gd-uAZ">
             <objects>
@@ -65,11 +127,21 @@
                                     <constraint firstAttribute="width" constant="200" id="914-TZ-IVY"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-8W-W13">
+                                <rect key="frame" x="184" y="738" width="46" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="BJL-mR-8tB" kind="presentation" modalPresentationStyle="fullScreen" id="tvj-xX-meQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gXQ-8W-W13" firstAttribute="leading" secondItem="oqY-Ia-Tbb" secondAttribute="leading" constant="184" id="1NA-zv-caO"/>
+                            <constraint firstItem="oqY-Ia-Tbb" firstAttribute="bottom" secondItem="gXQ-8W-W13" secondAttribute="bottom" constant="94" id="KXM-xB-UMg"/>
                             <constraint firstItem="VDP-rE-6vG" firstAttribute="centerY" secondItem="giI-vc-6Lm" secondAttribute="centerY" id="Ucd-Gp-Vbx"/>
                             <constraint firstItem="VDP-rE-6vG" firstAttribute="centerX" secondItem="giI-vc-6Lm" secondAttribute="centerX" id="bS3-RD-jBO"/>
+                            <constraint firstItem="oqY-Ia-Tbb" firstAttribute="trailing" secondItem="gXQ-8W-W13" secondAttribute="trailing" constant="184" id="hrm-Cm-sbY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oqY-Ia-Tbb"/>
                     </view>
@@ -85,7 +157,21 @@
                     <view key="view" contentMode="scaleToFill" id="xvv-ZX-IJo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYE-IA-bk8">
+                                <rect key="frame" x="184" y="738" width="46" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="CVt-Qy-7Jd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3wO-ij-4c2" firstAttribute="bottom" secondItem="PYE-IA-bk8" secondAttribute="bottom" constant="94" id="QIR-N3-WvV"/>
+                            <constraint firstItem="PYE-IA-bk8" firstAttribute="leading" secondItem="3wO-ij-4c2" secondAttribute="leading" constant="184" id="cyi-aq-Qiv"/>
+                            <constraint firstItem="3wO-ij-4c2" firstAttribute="trailing" secondItem="PYE-IA-bk8" secondAttribute="trailing" constant="184" id="tZ6-9m-iBE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3wO-ij-4c2"/>
                     </view>
                 </viewController>
