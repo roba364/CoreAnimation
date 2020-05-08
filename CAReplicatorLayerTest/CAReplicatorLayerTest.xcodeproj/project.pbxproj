@@ -13,6 +13,7 @@
 		A4AE40F52461647400677DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AE40F32461647400677DD0 /* Main.storyboard */; };
 		A4AE40F72461647500677DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AE40F62461647500677DD0 /* Assets.xcassets */; };
 		A4AE40FA2461647500677DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AE40F82461647500677DD0 /* LaunchScreen.storyboard */; };
+		A4D155632465C1B9002234BA /* LoadingCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D155622465C1B9002234BA /* LoadingCircleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A4AE40F62461647500677DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4AE40F92461647500677DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4AE40FB2461647500677DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D155622465C1B9002234BA /* LoadingCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				A4AE40ED2461647400677DD0 /* AppDelegate.swift */,
 				A4AE40EF2461647400677DD0 /* SceneDelegate.swift */,
+				A4D155622465C1B9002234BA /* LoadingCircleViewController.swift */,
 				A4AE40F12461647400677DD0 /* ViewController.swift */,
 				A4AE40F32461647400677DD0 /* Main.storyboard */,
 				A4AE40F62461647500677DD0 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AE40F22461647400677DD0 /* ViewController.swift in Sources */,
+				A4D155632465C1B9002234BA /* LoadingCircleViewController.swift in Sources */,
 				A4AE40EE2461647400677DD0 /* AppDelegate.swift in Sources */,
 				A4AE40F02461647400677DD0 /* SceneDelegate.swift in Sources */,
 			);
