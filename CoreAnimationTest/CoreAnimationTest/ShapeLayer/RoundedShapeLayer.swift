@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, CAAnimationDelegate {
+class RoundedShapeLayer: UIViewController, CAAnimationDelegate {
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet {

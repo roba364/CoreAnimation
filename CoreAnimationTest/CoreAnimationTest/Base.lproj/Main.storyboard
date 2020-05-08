@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mSx-7Q-5WI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qHP-kD-evO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,6 +7,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Type Machine Animation-->
+        <scene sceneID="GSl-yd-8b8">
+            <objects>
+                <viewController id="qHP-kD-evO" customClass="TypeMachineAnimation" customModule="CoreAnimationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wU2-W1-yLf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-ZQ-gRs">
+                                <rect key="frame" x="15" y="448" width="384" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.35032284530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pY9-pn-4D2" firstAttribute="trailing" secondItem="CLi-ZQ-gRs" secondAttribute="trailing" constant="15" id="8f7-KC-2Mq"/>
+                            <constraint firstItem="CLi-ZQ-gRs" firstAttribute="centerX" secondItem="wU2-W1-yLf" secondAttribute="centerX" id="BLv-85-B3s"/>
+                            <constraint firstItem="CLi-ZQ-gRs" firstAttribute="centerY" secondItem="wU2-W1-yLf" secondAttribute="centerY" id="h36-YK-DGC"/>
+                            <constraint firstItem="CLi-ZQ-gRs" firstAttribute="leading" secondItem="pY9-pn-4D2" secondAttribute="leading" constant="15" id="mNt-K1-7NY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pY9-pn-4D2"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="CLi-ZQ-gRs" id="ex8-0R-saP"/>
+                        <segue destination="mSx-7Q-5WI" kind="presentation" identifier="toDestinyVC" modalPresentationStyle="fullScreen" id="yb3-Dg-ZXg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRD-8l-eLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3049" y="108"/>
+        </scene>
         <!--Chain Text Animation-->
         <scene sceneID="aWv-Xa-f8b">
             <objects>
@@ -179,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="-623" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--Loading Shape Layer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreAnimationTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoadingShapeLayer" customModule="CoreAnimationTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="116"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Rounded Shape Layer-->
         <scene sceneID="AYh-0l-hqf">
             <objects>
-                <viewController id="28z-7J-APX" customClass="SecondViewController" customModule="CoreAnimationTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="28z-7J-APX" customClass="RoundedShapeLayer" customModule="CoreAnimationTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TEz-Y4-xbV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
