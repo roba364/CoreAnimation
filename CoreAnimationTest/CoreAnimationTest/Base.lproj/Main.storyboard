@@ -53,7 +53,9 @@
                                             <constraint firstAttribute="height" constant="40" id="dva-ei-F8Y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Shake"/>
+                                        <state key="normal" title="Shake">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="shakeButtonTapped:" destination="MBj-6D-IJK" eventType="touchUpInside" id="D27-lw-Kch"/>
                                         </connections>
