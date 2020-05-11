@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayoutAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGL-ME-eph">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSV-ae-Nv9">
+                                        <rect key="frame" x="369" y="41" width="30" height="39"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="toggleMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHk-Uc-Zom"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-Lg-3Uf">
+                                        <rect key="frame" x="155.5" y="49" width="103" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3a3-Lg-3Uf" secondAttribute="bottom" constant="8" id="Joa-uy-ssF"/>
+                                    <constraint firstAttribute="trailing" secondItem="vSV-ae-Nv9" secondAttribute="trailing" constant="15" id="TfX-mN-d3K"/>
+                                    <constraint firstItem="3a3-Lg-3Uf" firstAttribute="centerX" secondItem="gGL-ME-eph" secondAttribute="centerX" id="ZY1-oa-ugf"/>
+                                    <constraint firstAttribute="height" constant="80" id="nkv-Ot-8Vz"/>
+                                    <constraint firstAttribute="bottom" secondItem="vSV-ae-Nv9" secondAttribute="bottom" id="wOJ-Yp-ZAv"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sz8-fj-IxS">
+                                <rect key="frame" x="0.0" y="85" width="414" height="811"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sz8-fj-IxS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0wv-EO-Cqt"/>
+                            <constraint firstItem="gGL-ME-eph" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1op-Hv-5Tv"/>
+                            <constraint firstItem="Sz8-fj-IxS" firstAttribute="top" secondItem="gGL-ME-eph" secondAttribute="bottom" constant="5" id="AxM-Ez-ATI"/>
+                            <constraint firstItem="gGL-ME-eph" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ORF-8p-nMP"/>
+                            <constraint firstItem="gGL-ME-eph" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SHj-wi-Nw4"/>
+                            <constraint firstItem="Sz8-fj-IxS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g8h-S6-UGL"/>
+                            <constraint firstAttribute="bottom" secondItem="Sz8-fj-IxS" secondAttribute="bottom" id="waD-wM-5Fi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuHeightConstraint" destination="nkv-Ot-8Vz" id="uFv-qj-bAZ"/>
+                        <outlet property="tableView" destination="Sz8-fj-IxS" id="B2T-mP-saM"/>
+                        <outlet property="titleLabel" destination="3a3-Lg-3Uf" id="5es-xK-Pjb"/>
+                        <outlet property="toggleButton" destination="vSV-ae-Nv9" id="Yhm-ld-gQV"/>
+                        <outlet property="toggleButtonTrailingConstraint" destination="vSV-ae-Nv9" id="u4F-Xn-KZP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
