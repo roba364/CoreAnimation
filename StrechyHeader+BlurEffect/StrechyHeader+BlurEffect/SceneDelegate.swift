@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let stretchyVC = StretchyHeaderController(collectionViewLayout: UICollectionViewFlowLayout())
+        let stretchyVC = StretchyHeaderController(collectionViewLayout: StretchyHeaderFlowLayout())
         window?.rootViewController = stretchyVC
         window?.makeKeyAndVisible()
     }

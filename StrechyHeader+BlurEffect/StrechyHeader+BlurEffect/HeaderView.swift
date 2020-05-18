@@ -12,7 +12,7 @@ class HeaderView: UICollectionReusableView {
     
     let imageView: UIImageView = {
        let iv = UIImageView(image: UIImage(named: "sun"))
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         return iv
     }()
         
