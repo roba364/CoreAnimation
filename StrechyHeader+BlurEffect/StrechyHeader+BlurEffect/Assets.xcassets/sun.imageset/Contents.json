@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "stretchy_header.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sun.png",
       "scale" : "2x"
     },
     {
