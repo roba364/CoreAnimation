@@ -8,14 +8,18 @@
 
 import UIKit
 
+import UIKit
+
 class HeaderView: UICollectionReusableView {
     
     let imageView: UIImageView = {
-       let iv = UIImageView(image: UIImage(named: "sun"))
+        let iv = UIImageView(image: UIImage(named: "sun"))
         iv.contentMode = .scaleAspectFill
         return iv
     }()
-        
+    
+    var visualEffectView =  UIVisualEffectView(effect: nil)
+    let animator = UIViewPropertyAnimator(duration: 0.5, curve: .linear)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,12 +27,28 @@ class HeaderView: UICollectionReusableView {
         
         backgroundColor = .red
         
-        addSubview(imageView)
         
+        addSubview(imageView)
         imageView.fillSuperview()
+        
+        //blur
+        setupVisualEffectBlur()
     }
     
-    required init?(coder: NSCoder) {
+    fileprivate func setupVisualEffectBlur() {
+        self.addSubview(visualEffectView)
+        
+        animator.addAnimations {
+            self.visualEffectView.effect = UIBlurEffect(style: .regular)
+        }
+        
+        animator.fractionComplete = 0
+        
+        visualEffectView.fillSuperview()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

@@ -15,6 +15,8 @@ class StretchyHeaderController: UICollectionViewController {
     fileprivate let cellId = "Cell"
     fileprivate let headerId = "headerId"
     fileprivate let padding: CGFloat = 16
+    fileprivate var headerView: HeaderView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // custom code for our collection view
@@ -67,12 +69,18 @@ extension StretchyHeaderController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as? HeaderView
         
-        return header
+        return headerView!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return .init(width: view.frame.width, height: 340)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+    
+        headerView?.animator.fractionComplete = max(-contentOffsetY, 0) / 100
     }
 }
